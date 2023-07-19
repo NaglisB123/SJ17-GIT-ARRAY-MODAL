@@ -75,9 +75,18 @@ const skArr = [1, 4, 5];
 
 // printMen(people);
 
-// 2. Naudojant Array.prototype.filter grazinti visas moteris jaunesnes nei 35 metai.
+// const moterys = youngWomen(people);
 
+// 5. Naudojant Array.prototype.forEach atspausdinti visų vairuojančių žmonių lytį.
 
-
-const moterys = youngWomen(people);
-console.log('moterys ===', moterys.length);
+function printDriverGender() {
+  // sukti cikla
+  people.forEach((personObj) => {
+    // patikrinti ar asmuo vairuoja 
+    if (personObj.hasCar === true) {
+    // jei taip, atspausdinti jo lyti
+    console.log(personObj.name, 'vairuoja ===', personObj.sex);
+     }
+  })
+}
+printDriverGender();
