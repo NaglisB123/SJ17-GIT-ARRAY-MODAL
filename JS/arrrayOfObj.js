@@ -79,7 +79,13 @@ const skArr = [1, 4, 5];
 
 // 5. Naudojant Array.prototype.forEach atspausdinti visų vairuojančių žmonių lytį.
 
-
 // printDriverGender naudotu argumenta
 // printDriverGender iskelti i forEach moduli
 printDriverGender(people);
+
+// 5.1 Naudojant Array.prototype.map grazinti naujame masyve visų vairuojančių žmonių lytį.
+
+const driversGendersArr = people
+  .filter((pObj) => pObj.hasCar === true)
+  .map((pObj) => pObj.sex);
+console.log('driversGendersArr ===', driversGendersArr);
