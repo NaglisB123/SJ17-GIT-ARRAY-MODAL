@@ -1,5 +1,5 @@
-import { printMen } from './modules/forEachFn.js';
-import { youngWomen } from './modules/filterFn.js'
+import { printMen, printDriverGender } from './modules/forEachFn.js';
+import { youngWomen } from './modules/filterFn.js';
 console.log('arrrayOfObj.js file was loaded');
 
 const people = [
@@ -79,14 +79,7 @@ const skArr = [1, 4, 5];
 
 // 5. Naudojant Array.prototype.forEach atspausdinti visų vairuojančių žmonių lytį.
 
-function printDriverGender() {
-  // sukti cikla
-  people.forEach((personObj) => {
-    // patikrinti ar asmuo vairuoja 
-    if (personObj.hasCar === true) {
-    // jei taip, atspausdinti jo lyti
-    console.log(personObj.name, 'vairuoja ===', personObj.sex);
-     }
-  })
-}
-printDriverGender();
+
+// printDriverGender naudotu argumenta
+// printDriverGender iskelti i forEach moduli
+printDriverGender(people);

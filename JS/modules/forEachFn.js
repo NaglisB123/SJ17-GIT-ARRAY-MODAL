@@ -10,3 +10,17 @@ export function printMen(arr) {
       // jei ne, nieko
     });
     }
+
+    //===============
+
+    export function printDriverGender(arr) {
+      // sukti cikla
+      arr.forEach((personObj) => {
+        // patikrinti ar asmuo vairuoja
+        if (personObj.hasCar === true) {
+          // jei taip, atspausdinti jo lyti
+          console.log(personObj.name, 'vairuoja ===', personObj.sex);
+          return personObj.sex;
+        }
+      });
+    }
