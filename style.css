@@ -1,5 +1,4 @@
 .modal {
-  margin: 50px;
   padding: 0 15px 25px;
   border: 1px solid #000;
   border-radius: 4px;
@@ -8,10 +7,17 @@
   min-width: 200px;
   left: 50%;
   transform: translateX(-50%);
-  top: 30%;
-  display: none;
+  top: 25%;
+  z-index: 10;
+  background-color: #fff;
 }
 
+.backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.35);
+  inset: 0;
+  z-index: 1;
+}
 .d-none {
-    display: none;
+  display: none;
 }
