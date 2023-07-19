@@ -1,4 +1,4 @@
-'use strict';
+import { printMen } from './modules/forEachFn.js'
 console.log('arrrayOfObj.js file was loaded');
 
 const people = [
@@ -71,13 +71,6 @@ const people = [
     */
 console.table(people);
 const skArr = [1, 4, 5];
-// 1. Naudojant array.prototype.forEach atspausdinti visus vyrus
-people.forEach((personObj) => {
-  console.log('personObj.sex ===', personObj.sex);
-  // patikrinti ar vyras
-  if (personObj.sex === 'male') {
-    console.log(personObj); 
-  }
-  // jei taip, spausdinti
-  // jei ne, nieko
-});
+
+
+printMen(people);
