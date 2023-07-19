@@ -1,0 +1,17 @@
+.modal {
+  margin: 50px;
+  padding: 0 15px 25px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px gray;
+  position: fixed;
+  min-width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  display: none;
+}
+
+.d-none {
+    display: none;
+}
