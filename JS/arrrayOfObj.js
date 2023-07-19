@@ -118,22 +118,15 @@ rez
 function changeIncomeToSalary() {
   // sukti cikla
   const salarayArr = people.map((pObj) => {
-    // a. ciklo metu grazinti nauja norima objekta
-    const naujasObj = {
-      name: pObj.name,
-      surname: pObj.surname,
-      sex: pObj.sex,
-      age: pObj.age,
-      married: pObj.married,
-      hasCar: pObj.hasCar,
-      salary: pObj.income,
-    };
-    return naujasObj;
+    // b. ciklo metu nusikopijuoti pObj
+    const pObjCopy = { ...pObj };
+    // atlikti copijai pakeitimus
+    pObjCopy.salary = pObj.income;
+    delete pObjCopy.income;
+    // grazinti kopija
+    return pObjCopy;
   });
   console.table(salarayArr);
-  // b. ciklo metu nusikopijuoti pObj
-  // atlikti copijai pakeitimus
-  // grazinti kopija
 
   // grazinti pakeista masyva
   return salarayArr;
